@@ -8,7 +8,7 @@ const Login = () => {
                 <Col sm={6} style={{ marginBottom: '30px', marginTop: '100px' }}>
                     <Image src='./assets/img/logo.png' style={{ maxWidth: '200px', maxHeight: '200px', heigt: '100%', width: '100%' }} alt='Image cannot be loaded!' fluid={true} />
                     <div className="mt-4">
-                        <h1 style={{ color: '#FFF', fontWeight: 'bold' }}> Easy, Fast and Reliable </h1>
+                        <h1 className={loginStyle.fontWhiteBold}> Easy, Fast and Reliable </h1>
                         <p style={{ color: '#6A6A6A' }}>Go shopping for merchandise, just go to dumb merch shopping. the biggest merchandise in Indonesia</p>
                     </div>
                     <Row className="mt-5">
@@ -22,10 +22,10 @@ const Login = () => {
                 </Col>
                 <Col sm={6} className="d-flex align-items-center">
                     <Container style={{ backgroundColor: '#191819', padding: '30px', borderRadius: '10px' }}>
-                        <h1 className={loginStyle.headerTitle}>Login</h1>
+                        <h1 className={loginStyle.fontWhiteBold}>Login</h1>
                         <Form className="mt-4">
                             <Form.Group className="mb-3">
-                                <Form.Control type="email" placeholder="Email" style={{ backgroundColor: '#474647' }} />
+                                <Form.Control type="text" placeholder="Email" style={{ backgroundColor: '#474647' }} />
                             </Form.Group>
                             <Form.Group className="mb-3">
                                 <Form.Control type="password" placeholder="Password" style={{ backgroundColor: '#474647' }} />
