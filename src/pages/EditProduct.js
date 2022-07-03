@@ -7,6 +7,9 @@ import Form from 'react-bootstrap/Form';
 import editProductStyle from '../styles/EditProduct.module.css';
 
 const EditProduct = () => {
+
+    document.title = 'Edit Product';
+
     return (
         <>
             <NavbarComponent />

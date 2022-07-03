@@ -5,6 +5,9 @@ import Container from 'react-bootstrap/Container';
 import ProductCardComponent from "../components/ProductCardComponent";
 
 const HomePage = () => {
+
+    document.title = 'Home';
+
     return (
         <>
             <NavbarComponent />

@@ -11,6 +11,8 @@ const ProductPage = () => {
         return word.length >= 40 ? word.substring(0, 40) + "..." : word;
     }
 
+    document.title = 'Products';
+
     return (
         <>
             <NavbarComponent />

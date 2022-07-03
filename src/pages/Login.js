@@ -11,6 +11,8 @@ const Login = () => {
 
     const navigate = useNavigate();
 
+    document.title = 'Login | DumbwaysMerch';
+
     const handleEmailChange = (event) => {
         setEmail(event.target.value);
     }

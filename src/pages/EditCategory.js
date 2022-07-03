@@ -4,6 +4,9 @@ import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 
 const EditCategory = () => {
+
+    document.title = 'Edit Category';
+
     return (
         <>
             <NavbarComponent />

@@ -5,6 +5,9 @@ import NavbarComponent from "../components/NavbarComponent"
 import Container from 'react-bootstrap/Container';
 
 const DetailProduct = () => {
+
+    document.title = 'Detail Product';
+
     return (
         <>
             <NavbarComponent />

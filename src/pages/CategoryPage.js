@@ -4,6 +4,9 @@ import Table from 'react-bootstrap/Table';
 import Button from 'react-bootstrap/Button';
 
 const CategoryProduct = () => {
+
+    document.title = 'Category';
+
     return (
         <>
             <NavbarComponent />

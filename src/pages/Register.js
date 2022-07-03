@@ -28,6 +28,8 @@ const Register = () => {
         localStorage.setItem('user', JSON.stringify(data));
     }
 
+    document.title = 'Register | DumbwaysMerch';
+
     return (
         <Container className="d-flex align-items-center justify-content-center" style={{ height: '100vh' }}>
             <Row>

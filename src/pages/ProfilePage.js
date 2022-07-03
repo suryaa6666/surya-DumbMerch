@@ -4,6 +4,9 @@ import Container from 'react-bootstrap/Container';
 import NavbarComponent from "../components/NavbarComponent"
 
 const ProfilePage = () => {
+
+    document.title = 'My Profile';
+
     return (
         <>
             <NavbarComponent />

@@ -11,6 +11,8 @@ const ComplainPage = () => {
         return word.length >= 25 ? word.substring(0, 25) + "..." : word;
     }
 
+    document.title = 'Complain';
+
     return (
         <>
             <NavbarComponent />
