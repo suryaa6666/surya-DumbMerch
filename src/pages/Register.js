@@ -2,12 +2,16 @@ import { Col, Container, Row, Form, Button, Image } from 'react-bootstrap';
 import registerStyle from '../styles/Register.module.css';
 import { Link } from 'react-router-dom';
 import { useState } from 'react';
+import { toast } from 'react-toastify';
+import { useNavigate } from 'react-router-dom';
 
 const Register = () => {
 
     const [name, setName] = useState('');
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
+
+    const navigate = useNavigate();
 
     const handleNameChange = (event) => {
         setName(event.target.value);
@@ -24,8 +28,62 @@ const Register = () => {
     const handleSubmit = (event) => {
         event.preventDefault();
         let data = localStorage.getItem('user') ? JSON.parse(localStorage.getItem('user')) : [];
+        if (!name)
+            return toast.error('Name cannot be empty!', {
+                position: "top-left",
+                autoClose: 2000,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: false,
+                draggable: true,
+                progress: undefined,
+            });
+        if (!email)
+            return toast.error('Email cannot be empty!', {
+                position: "top-left",
+                autoClose: 2000,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: false,
+                draggable: true,
+                progress: undefined,
+            });
+        if (!password)
+            return toast.error('Password cannot be empty!', {
+                position: "top-left",
+                autoClose: 2000,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: false,
+                draggable: true,
+                progress: undefined,
+            });
+        if (data) {
+            const emailExist = data.some(item => item.email == email)
+            if (emailExist) {
+                return toast.error('Email already exist, use another one!', {
+                    position: "top-left",
+                    autoClose: 2000,
+                    hideProgressBar: false,
+                    closeOnClick: true,
+                    pauseOnHover: false,
+                    draggable: true,
+                    progress: undefined,
+                });
+            }
+        }
         data.push({ name, email, password });
         localStorage.setItem('user', JSON.stringify(data));
+        toast.success('New account has been successfully created!', {
+            position: "top-left",
+            autoClose: 5000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: false,
+            draggable: true,
+            progress: undefined,
+        });
+        navigate('/');
     }
 
     document.title = 'Register | DumbwaysMerch';

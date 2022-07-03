@@ -1,5 +1,6 @@
 import { Navbar, Nav } from 'react-bootstrap';
 import { useNavigate, Link } from 'react-router-dom';
+import { toast } from 'react-toastify';
 
 const NavbarComponent = () => {
 
@@ -15,6 +16,15 @@ const NavbarComponent = () => {
 
     const handleLogout = () => {
         localStorage.removeItem('userLogin');
+        toast.success('Logout success!', {
+            position: "top-left",
+            autoClose: 2000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: false,
+            draggable: true,
+            progress: undefined,
+        });
         navigate('/');
     }
 

@@ -11,6 +11,8 @@ import Register from './pages/Register';
 import EditCategory from './pages/EditCategory';
 import EditProduct from './pages/EditProduct';
 import PrivateRoute from './components/PrivateRoute';
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 import {
   BrowserRouter,
@@ -22,6 +24,17 @@ function App() {
   return (
     <>
       <BrowserRouter>
+        <ToastContainer
+          position="top-left"
+          autoClose={2000}
+          hideProgressBar={false}
+          newestOnTop={false}
+          closeOnClick
+          rtl={false}
+          pauseOnFocusLoss
+          draggable
+          pauseOnHover={false}
+        />
         <Routes>
           <Route path="/" element={<Login />}></Route>
           <Route path="/register" element={<Register />}></Route>

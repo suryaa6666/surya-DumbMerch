@@ -3,6 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import loginStyle from '../styles/Login.module.css';
 import { Link } from 'react-router-dom';
 import { useState, useEffect } from 'react';
+import { toast } from 'react-toastify';
 
 const Login = () => {
 
@@ -30,15 +31,53 @@ const Login = () => {
     const handleSubmit = (event) => {
         event.preventDefault();
         let data = localStorage.getItem('user') ? JSON.parse(localStorage.getItem('user')) : [];
-        let login = data.find(item => {
+        let login = data.some(item => {
             return item.email == email && item.password == password; // check if user is there
         });
-        if (login) {
-            localStorage.setItem('userLogin', JSON.stringify(login));
-            navigate('/home');
-        } else {
-            navigate('/');
+        if (!email) {
+            return toast.error('Email cannot be empty!', {
+                position: "top-left",
+                autoClose: 2000,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: false,
+                draggable: true,
+                progress: undefined,
+            });
         }
+        if (!password) {
+            return toast.error('Password cannot be empty!', {
+                position: "top-left",
+                autoClose: 2000,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: false,
+                draggable: true,
+                progress: undefined,
+            });
+        }
+        if (!login) {
+            return toast.error('Email / Password Incorrect!', {
+                position: "top-left",
+                autoClose: 2000,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: false,
+                draggable: true,
+                progress: undefined,
+            });
+        }
+        localStorage.setItem('userLogin', JSON.stringify(login));
+        toast.success('Login success!', {
+            position: "top-left",
+            autoClose: 2000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: false,
+            draggable: true,
+            progress: undefined,
+        });
+        navigate('/home');
     }
 
     return (
