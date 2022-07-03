@@ -1,6 +1,16 @@
 import { Navbar, Nav } from 'react-bootstrap';
+import { Route, useNavigate } from 'react-router-dom';
+
 
 const NavbarComponent = () => {
+
+    const navigate = useNavigate();
+
+    const handleLogout = () => {
+        localStorage.removeItem('userLogin');
+        navigate('/');
+    }
+
     return (
         <Navbar collapseOnSelect expand="lg" variant="dark" className="pe-5 ps-5">
             <Navbar.Brand href="/">
@@ -15,9 +25,9 @@ const NavbarComponent = () => {
             <Navbar.Toggle aria-controls="responsive-navbar-nav" />
             <Navbar.Collapse id="responsive-navbar-nav">
                 <Nav className="d-flex justify-content-end w-100">
-                    <Nav.Link href="" className="mx-2 fw-bold" style={{ color: '#FFF' }}>Complain</Nav.Link>
-                    <Nav.Link href="" className="mx-2 fw-bold" style={{ color: '#FFF' }}>Profile</Nav.Link>
-                    <Nav.Link href="" className="mx-2 fw-bold" style={{ color: '#FFF' }}>Logout</Nav.Link>
+                    <Nav.Link className="mx-2 fw-bold" style={{ color: '#FFF' }}>Complain</Nav.Link>
+                    <Nav.Link className="mx-2 fw-bold" style={{ color: '#FFF' }}>Profile</Nav.Link>
+                    <Nav.Link onClick={handleLogout} className="mx-2 fw-bold" style={{ color: '#FFF' }}>Logout</Nav.Link>
                 </Nav>
             </Navbar.Collapse>
         </Navbar>

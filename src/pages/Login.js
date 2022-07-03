@@ -25,7 +25,12 @@ const Login = () => {
         let login = data.find(item => {
             return item.email == email && item.password == password; // check if user is there
         });
-        login ? navigate('/home') : navigate('/');
+        if (login) {
+            localStorage.setItem('userLogin', JSON.stringify(login));
+            navigate('/home');
+        } else {
+            navigate('/');
+        }
     }
 
     return (
