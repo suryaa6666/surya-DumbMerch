@@ -6,7 +6,7 @@ const ProductCardComponent = (props) => {
         <Card style={{ width: '15rem', border: 'none', marginTop: '20px', marginBottom: '20px', backgroundColor: '#202021' }}>
             <Card.Img variant="top" src={props.imagesrc} alt="Product image" style={{ maxHeight: '300px' }} />
             <Card.Body style={{ backgroundColor: '#202021', borderRadius: '10px' }}>
-                <Card.Title className="fw-bold"> <Link to='/detail' className="text-decoration-none text-danger"> {props.title} </Link> </Card.Title>
+                <Card.Title className="fw-bold"> <Link to={`/detail/${props.id}`} className="text-decoration-none text-danger"> {props.title} </Link></Card.Title>
                 <Card.Text className="text-white">
                     Rp. {props.price}
                 </Card.Text>

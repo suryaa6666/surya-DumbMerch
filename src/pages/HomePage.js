@@ -3,6 +3,7 @@ import Row from 'react-bootstrap/Row';
 import NavbarComponent from "../components/NavbarComponent"
 import Container from 'react-bootstrap/Container';
 import ProductCardComponent from "../components/ProductCardComponent";
+import data from '../dummyData';
 
 const HomePage = () => {
 
@@ -14,12 +15,15 @@ const HomePage = () => {
             <Container className="py-5">
                 <h3 className="text-danger fw-bold"> Product </h3>
                 <Row>
-                    <Col sm={3}>
-                        <ProductCardComponent title="Mouse" price="500.000" stock="600" imagesrc="./assets/img/product1.png" />
-                    </Col>
-                    <Col sm={3}>
-                        <ProductCardComponent title="Keyboard" price="700.000" stock="600" imagesrc="./assets/img/product2.png" />
-                    </Col>
+                    {
+                        data.map(item => {
+                            return (
+                                <Col md={3}>
+                                    <ProductCardComponent title={item.name} price={item.price} stock={item.stock} imagesrc={`./assets/img/${item.photo}`} id={item.id} />
+                                </Col>
+                            )
+                        })
+                    }
                 </Row>
             </Container>
         </>
