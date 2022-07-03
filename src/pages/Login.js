@@ -2,7 +2,7 @@ import { Col, Container, Row, Form, Button, Image } from 'react-bootstrap';
 import { Route, useNavigate } from 'react-router-dom';
 import loginStyle from '../styles/Login.module.css';
 import { Link } from 'react-router-dom';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 const Login = () => {
 
@@ -12,6 +12,12 @@ const Login = () => {
     const navigate = useNavigate();
 
     document.title = 'Login | DumbwaysMerch';
+
+    const login = localStorage.getItem('userLogin') ? true : false;
+
+    useEffect(() => {
+        if (login) navigate('/home');
+    }, []);
 
     const handleEmailChange = (event) => {
         setEmail(event.target.value);
