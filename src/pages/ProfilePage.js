@@ -47,7 +47,7 @@ const ProfilePage = () => {
                         <div className="w-100" style={{ backgroundColor: '#303031', padding: '20px' }}>
                             <Row>
                                 <Col sm={3}>
-                                    <img src='./assets/img/myprofile.jpg' alt="Image cannot be loaded" className='w-100 h-100' style={{ objectFit: 'cover' }} />
+                                    <img src='./assets/img/product1.png' alt="Image cannot be loaded" className='w-100 h-100' style={{ objectFit: 'cover' }} />
                                 </Col>
                                 <Col sm={6} className="text-white">
                                     <h5 className="text-danger fw-bold">Mouse</h5>
