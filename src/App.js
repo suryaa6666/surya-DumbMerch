@@ -10,6 +10,8 @@ import ProfilePage from './pages/ProfilePage';
 import Register from './pages/Register';
 import EditCategory from './pages/EditCategory';
 import EditProduct from './pages/EditProduct';
+import PrivateRoute from './components/PrivateRoute';
+
 import {
   BrowserRouter,
   Routes,
@@ -23,14 +25,16 @@ function App() {
         <Routes>
           <Route path="/" element={<Login />}></Route>
           <Route path="/register" element={<Register />}></Route>
-          <Route path="/home" element={<HomePage />}></Route>
-          <Route path="/detail" element={<DetailProduct />}></Route>
-          <Route path="/profile" element={<ProfilePage />}></Route>
-          <Route path="/category" element={<CategoryPage />}></Route>
-          <Route path="/products" element={<ProductPage />}></Route>
-          <Route path="/complain" element={<ComplainPage />}></Route>
-          <Route path="/editcategory" element={<EditCategory />}></Route>
-          <Route path="/editproduct" element={<EditProduct />}></Route>
+          <Route path="/" element={<PrivateRoute />}>
+            <Route path="/home" element={<HomePage />}></Route>
+            <Route path="/detail" element={<DetailProduct />}></Route>
+            <Route path="/profile" element={<ProfilePage />}></Route>
+            <Route path="/category" element={<CategoryPage />}></Route>
+            <Route path="/products" element={<ProductPage />}></Route>
+            <Route path="/complain" element={<ComplainPage />}></Route>
+            <Route path="/editcategory" element={<EditCategory />}></Route>
+            <Route path="/editproduct" element={<EditProduct />}></Route>
+          </Route>
         </Routes>
       </BrowserRouter>
     </>
