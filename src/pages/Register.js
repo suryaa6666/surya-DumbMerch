@@ -93,7 +93,7 @@ const Register = () => {
         <Container className="d-flex align-items-center justify-content-center" style={{ height: '100vh' }}>
             <Row>
                 <Col sm={6} style={{ marginBottom: '30px', marginTop: '100px' }}>
-                    <Image src='./assets/img/logo.png' style={{ maxWidth: '200px', maxHeight: '200px', heigt: '100%', width: '100%' }} alt='Image cannot be loaded!' fluid={true} />
+                    <Image src='../assets/img/logo.png' style={{ maxWidth: '200px', maxHeight: '200px', heigt: '100%', width: '100%' }} alt='Image cannot be loaded!' fluid={true} />
                     <div className="mt-4">
                         <h1 className={registerStyle.fontWhiteBold}> Easy, Fast and Reliable </h1>
                         <p style={{ color: '#6A6A6A' }}>Go shopping for merchandise, just go to dumb merch shopping. the biggest merchandise in Indonesia</p>

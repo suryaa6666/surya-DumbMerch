@@ -3,7 +3,8 @@ import Row from 'react-bootstrap/Row';
 import Button from 'react-bootstrap/Button';
 import NavbarComponent from "../components/NavbarComponent"
 import Container from 'react-bootstrap/Container';
-import { useParams } from 'react-router-dom';
+import { useParams, useNavigate } from 'react-router-dom';
+import { toast } from 'react-toastify';
 import data from '../dummyData';
 
 const DetailProduct = () => {
@@ -12,9 +13,30 @@ const DetailProduct = () => {
 
     const { id } = useParams();
 
+    const navigate = useNavigate();
+
+    let isAdmin = JSON.parse(localStorage.getItem('userLogin'));
+    isAdmin = isAdmin["role"] == 'admin';
+
     const dataDetail = data.find(item => {
         return item.id == id;
     });
+
+    const handleBuy = () => {
+        let buy = localStorage.getItem('buy') ? JSON.parse(localStorage.getItem('buy')) : [];
+        buy.push({ ...dataDetail, date: Date.now() });
+        localStorage.setItem('buy', JSON.stringify(buy));
+        toast.success('Transaction success!', {
+            position: "top-left",
+            autoClose: 2000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: false,
+            draggable: true,
+            progress: undefined,
+        });
+        navigate('/profile');
+    }
 
     return (
         <>
@@ -36,7 +58,7 @@ const DetailProduct = () => {
                             <h3 className="text-danger fw-bold"> Rp. {dataDetail.price} </h3>
                         </div>
                         <div>
-                            <Button variant="danger" type="submit" className="w-100 mt-4">
+                            <Button variant="danger" type="submit" className="w-100 mt-4" onClick={handleBuy} disabled={isAdmin}>
                                 Buy
                             </Button>
                         </div>

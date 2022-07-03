@@ -1,11 +1,14 @@
 import Col from 'react-bootstrap/Col';
 import Row from 'react-bootstrap/Row';
 import Container from 'react-bootstrap/Container';
-import NavbarComponent from "../components/NavbarComponent"
+import NavbarComponent from "../components/NavbarComponent";
+import ProductTransactionComponent from "../components/ProductTransactionComponent";
 
 const ProfilePage = () => {
 
     document.title = 'My Profile';
+
+    let data = localStorage.getItem('buy') ? JSON.parse(localStorage.getItem('buy')) : [];
 
     return (
         <>
@@ -16,7 +19,7 @@ const ProfilePage = () => {
                     <Col sm={6}>
                         <Row>
                             <Col sm={6}>
-                                <img src='./assets/img/myprofile.jpg' alt="Image cannot be loaded" className='w-100' style={{ maxHeight: '400px', objectFit: 'cover', borderRadius: '10px' }} />
+                                <img src='../assets/img/myprofile.jpg' alt="Image cannot be loaded" className='w-100' style={{ maxHeight: '400px', objectFit: 'cover', borderRadius: '10px' }} />
                             </Col>
                             <Col sm={6}>
                                 <div>
@@ -45,26 +48,11 @@ const ProfilePage = () => {
                     <Col sm={6}>
                         <h3 className="text-danger fw-bold"> My Transaction </h3>
                         <div className="w-100" style={{ backgroundColor: '#303031', padding: '20px' }}>
-                            <Row>
-                                <Col sm={3}>
-                                    <img src='./assets/img/product1.png' alt="Image cannot be loaded" className='w-100 h-100' style={{ objectFit: 'cover' }} />
-                                </Col>
-                                <Col sm={6} className="text-white">
-                                    <h5 className="text-danger fw-bold">Mouse</h5>
-                                    <p className="text-danger">
-                                        <b>Saturday</b>, 03 Juli 2022
-                                    </p>
-                                    <p>
-                                        Price : Rp. 500.000
-                                    </p>
-                                    <p className="w-100 fw-bold">
-                                        Sub Total : Rp. 500.000
-                                    </p>
-                                </Col>
-                                <Col sm={3}>
-                                    <img src='./assets/img/logo.png' className="w-100 h-100" style={{ objectFit: 'contain' }} />
-                                </Col>
-                            </Row>
+                            {
+                                data.map((item, i) => {
+                                    return <ProductTransactionComponent photo={item.photo} name={item.name} price={item.price} date={item.date} key={i.toString()} />
+                                })
+                            }
                         </div>
                     </Col>
                 </Row>
