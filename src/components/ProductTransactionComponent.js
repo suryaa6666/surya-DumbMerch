@@ -1,5 +1,6 @@
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
+import { Link } from 'react-router-dom';
 
 const ProductTransactionComponent = (props) => {
 
@@ -23,7 +24,7 @@ const ProductTransactionComponent = (props) => {
                 <img src={`../assets/img/${props.photo}`} alt="Image cannot be loaded" className='w-100 h-100' style={{ objectFit: 'cover', borderRadius: '10px' }} />
             </Col>
             <Col sm={6} className="text-white">
-                <h5 className="text-danger fw-bold">{props.name}</h5>
+                <h5 className="fw-bold"><Link to={`/detail/${props.id}`} className="text-danger text-decoration-none">{props.name}</Link></h5>
                 <p className="text-danger">
                     {getFullDate()}
                 </p>

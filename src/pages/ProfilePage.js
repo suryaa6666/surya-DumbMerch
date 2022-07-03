@@ -50,7 +50,7 @@ const ProfilePage = () => {
                         <div className="w-100" style={{ backgroundColor: '#303031', padding: '20px' }}>
                             {
                                 data.map((item, i) => {
-                                    return <ProductTransactionComponent photo={item.photo} name={item.name} price={item.price} date={item.date} key={i.toString()} />
+                                    return <ProductTransactionComponent photo={item.photo} name={item.name} price={item.price} date={item.date} id={item.id} key={i.toString()} />
                                 })
                             }
                         </div>
