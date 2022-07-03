@@ -8,11 +8,12 @@ import Login from './pages/Login';
 import ProductPage from './pages/ProductPage';
 import ProfilePage from './pages/ProfilePage';
 import Register from './pages/Register';
+import EditCategory from './pages/EditCategory';
 
 function App() {
   return (
     <>
-      <ComplainPage />
+      <EditCategory />
     </>
   );
 }
