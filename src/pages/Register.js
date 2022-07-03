@@ -5,7 +5,10 @@ import { useState } from 'react';
 import { toast } from 'react-toastify';
 import { useNavigate } from 'react-router-dom';
 
+
 const Register = () => {
+
+    document.title = 'Register | DumbwaysMerch';
 
     const [name, setName] = useState('');
     const [email, setEmail] = useState('');
@@ -85,8 +88,6 @@ const Register = () => {
         });
         navigate('/');
     }
-
-    document.title = 'Register | DumbwaysMerch';
 
     return (
         <Container className="d-flex align-items-center justify-content-center" style={{ height: '100vh' }}>

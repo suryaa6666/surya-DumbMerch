@@ -7,12 +7,13 @@ import { toast } from 'react-toastify';
 
 const Login = () => {
 
+    document.title = 'Login | DumbwaysMerch';
+
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
 
     const navigate = useNavigate();
 
-    document.title = 'Login | DumbwaysMerch';
 
     const login = localStorage.getItem('userLogin') ? true : false;
 

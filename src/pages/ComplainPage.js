@@ -7,11 +7,11 @@ import Form from 'react-bootstrap/Form';
 
 const ComplainPage = () => {
 
+    document.title = 'Complain';
+
     const maxWord = (word) => {
         return word.length >= 25 ? word.substring(0, 25) + "..." : word;
     }
-
-    document.title = 'Complain';
 
     return (
         <>

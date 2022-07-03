@@ -7,11 +7,11 @@ import Row from 'react-bootstrap/Row';
 
 const ProductPage = () => {
 
+    document.title = 'List Product';
+
     const maxWord = (word) => {
         return word.length >= 40 ? word.substring(0, 40) + "..." : word;
     }
-
-    document.title = 'Products';
 
     return (
         <>
