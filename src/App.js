@@ -9,11 +9,12 @@ import ProductPage from './pages/ProductPage';
 import ProfilePage from './pages/ProfilePage';
 import Register from './pages/Register';
 import EditCategory from './pages/EditCategory';
+import EditProduct from './pages/EditProduct';
 
 function App() {
   return (
     <>
-      <EditCategory />
+      <EditProduct />
     </>
   );
 }

@@ -8,7 +8,7 @@ const EditCategory = () => {
         <>
             <NavbarComponent />
             <Container style={{ marginTop: '50px', paddingBottom: '50px' }}>
-                <h3 className="text-white fw-bold"> Edit Product </h3>
+                <h3 className="text-white fw-bold"> Edit Category </h3>
                 <Form className="mt-4">
                     <Form.Group className="mb-3">
                         <Form.Control type="text" placeholder="Product category" style={{ backgroundColor: '#474647' }} />
