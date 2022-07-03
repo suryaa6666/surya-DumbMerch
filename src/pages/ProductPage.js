@@ -15,7 +15,7 @@ const ProductPage = () => {
         <>
             <NavbarComponent />
             <Container style={{ marginTop: '50px', paddingBottom: '50px' }}>
-                <h3 className="text-white fw-bold"> List Category </h3>
+                <h3 className="text-white fw-bold"> List Product </h3>
                 <Table striped bordered hover variant="dark" className='mt-4'>
                     <thead>
                         <tr>
