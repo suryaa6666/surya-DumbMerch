@@ -38,6 +38,14 @@ const DetailProduct = () => {
         navigate('/profile');
     }
 
+    const priceFormatter = (price) => {
+        return new Intl.NumberFormat('id-ID', {
+            style: 'currency',
+            currency: 'IDR',
+            minimumFractionDigits: 0,
+        }).format(price)
+    }
+
     return (
         <>
             <NavbarComponent />
@@ -55,7 +63,7 @@ const DetailProduct = () => {
                             </p>
                         </div>
                         <div className="d-flex justify-content-end">
-                            <h3 className="text-danger fw-bold"> Rp. {dataDetail.price} </h3>
+                            <h3 className="text-danger fw-bold"> {priceFormatter(dataDetail.price)} </h3>
                         </div>
                         <div>
                             <Button variant="danger" type="submit" className="w-100 mt-4" onClick={handleBuy} disabled={isAdmin}>

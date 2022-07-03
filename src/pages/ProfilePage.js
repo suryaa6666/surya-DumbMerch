@@ -21,7 +21,15 @@ const ProfilePage = () => {
 
     useEffect(() => {
         getSubTotal();
-    }, [])
+    }, []);
+
+    const priceFormatter = (price) => {
+        return new Intl.NumberFormat('id-ID', {
+            style: 'currency',
+            currency: 'IDR',
+            minimumFractionDigits: 0,
+        }).format(price)
+    }
 
     return (
         <>
@@ -67,7 +75,7 @@ const ProfilePage = () => {
                                 })
                             }
                             <p className="w-100 fw-bold text-white">
-                                Sub Total : Rp. {subTotal}
+                                Sub Total : {priceFormatter(subTotal)}
                             </p>
                         </div>
                     </Col>

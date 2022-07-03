@@ -4,6 +4,14 @@ import { Link } from 'react-router-dom';
 
 const ProductTransactionComponent = (props) => {
 
+    const priceFormatter = (price) => {
+        return new Intl.NumberFormat('id-ID', {
+            style: 'currency',
+            currency: 'IDR',
+            minimumFractionDigits: 0,
+        }).format(price)
+    }
+
     const getFullDate = () => {
         const days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
         const months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
@@ -29,7 +37,7 @@ const ProductTransactionComponent = (props) => {
                     {getFullDate()}
                 </p>
                 <p>
-                    Price : Rp. {props.price}
+                    Price : {priceFormatter(props.price)}
                 </p>
             </Col>
             <Col sm={3}>
