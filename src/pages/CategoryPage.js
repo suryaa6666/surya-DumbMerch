@@ -1,6 +1,8 @@
 import Container from 'react-bootstrap/Container';
 import NavbarComponent from '../components/NavbarComponent';
 import Table from 'react-bootstrap/Table';
+import Col from 'react-bootstrap/Col';
+import Row from 'react-bootstrap/Row';
 import Button from 'react-bootstrap/Button';
 
 const CategoryProduct = () => {
@@ -25,48 +27,84 @@ const CategoryProduct = () => {
                             <td>1</td>
                             <td>Mouse</td>
                             <td>
-                                <Button variant="success" className="pb-2 pt-2 px-5 mx-2 fw-bold">Edit</Button>
-                                <Button variant="danger" className="pb-2 pt-2 px-5 mx-2 fw-bold">Delete</Button>
+                                <Row>
+                                    <Col md={6}>
+                                        <Button variant="success" className="w-100 fw-bold">Edit</Button>
+                                    </Col>
+                                    <Col md={6}>
+                                        <Button variant="danger" className="w-100 fw-bold">Delete</Button>
+                                    </Col>
+                                </Row>
                             </td>
                         </tr>
                         <tr>
                             <td>2</td>
                             <td>Keyboard</td>
                             <td>
-                                <Button variant="success" className="pb-2 pt-2 px-5 mx-2 fw-bold">Edit</Button>
-                                <Button variant="danger" className="pb-2 pt-2 px-5 mx-2 fw-bold">Delete</Button>
+                                <Row>
+                                    <Col md={6}>
+                                        <Button variant="success" className="w-100 fw-bold">Edit</Button>
+                                    </Col>
+                                    <Col md={6}>
+                                        <Button variant="danger" className="w-100 fw-bold">Delete</Button>
+                                    </Col>
+                                </Row>
                             </td>
                         </tr>
                         <tr>
                             <td>3</td>
                             <td>Bag</td>
                             <td>
-                                <Button variant="success" className="pb-2 pt-2 px-5 mx-2 fw-bold">Edit</Button>
-                                <Button variant="danger" className="pb-2 pt-2 px-5 mx-2 fw-bold">Delete</Button>
+                                <Row>
+                                    <Col md={6}>
+                                        <Button variant="success" className="w-100 fw-bold">Edit</Button>
+                                    </Col>
+                                    <Col md={6}>
+                                        <Button variant="danger" className="w-100 fw-bold">Delete</Button>
+                                    </Col>
+                                </Row>
                             </td>
                         </tr>
                         <tr>
                             <td>4</td>
                             <td>Stationary</td>
                             <td>
-                                <Button variant="success" className="pb-2 pt-2 px-5 mx-2 fw-bold">Edit</Button>
-                                <Button variant="danger" className="pb-2 pt-2 px-5 mx-2 fw-bold">Delete</Button>
+                                <Row>
+                                    <Col md={6}>
+                                        <Button variant="success" className="w-100 fw-bold">Edit</Button>
+                                    </Col>
+                                    <Col md={6}>
+                                        <Button variant="danger" className="w-100 fw-bold">Delete</Button>
+                                    </Col>
+                                </Row>
                             </td>
                         </tr>
                         <tr>
                             <td>5</td>
                             <td>Doll</td>
                             <td>
-                                <Button variant="success" className="pb-2 pt-2 px-5 mx-2 fw-bold">Edit</Button>
-                                <Button variant="danger" className="pb-2 pt-2 px-5 mx-2 fw-bold">Delete</Button>
+                                <Row>
+                                    <Col md={6}>
+                                        <Button variant="success" className="w-100 fw-bold">Edit</Button>
+                                    </Col>
+                                    <Col md={6}>
+                                        <Button variant="danger" className="w-100 fw-bold">Delete</Button>
+                                    </Col>
+                                </Row>
                             </td>
                         </tr>
                         <tr>
                             <td>6</td>
                             <td>Pillow</td>
                             <td>
-                                <Button variant="success" className="pb-2 pt-2 px-5 mx-2 fw-bold">Edit</Button>
-                                <Button variant="danger" className="pb-2 pt-2 px-5 mx-2 fw-bold">Delete</Button>
+                                <Row>
+                                    <Col md={6}>
+                                        <Button variant="success" className="w-100 fw-bold">Edit</Button>
+                                    </Col>
+                                    <Col md={6}>
+                                        <Button variant="danger" className="w-100 fw-bold">Delete</Button>
+                                    </Col>
+                                </Row>
                             </td>
                         </tr>
                     </tbody>

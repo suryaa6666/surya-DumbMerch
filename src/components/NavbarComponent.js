@@ -40,7 +40,7 @@ const NavbarComponent = () => {
     }
 
     return (
-        <Navbar collapseOnSelect expand="lg" variant="dark" className="pe-5 ps-5">
+        <Navbar collapseOnSelect expand="lg" variant="dark" className="pe-5 ps-5 sticky-top" style={{ backgroundColor: '#0A0A0B' }}>
             <Navbar.Brand>
                 <Link to="/home">
                     <img

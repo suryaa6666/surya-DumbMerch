@@ -40,10 +40,10 @@ const ProductPage = () => {
                             <td>600</td>
                             <td>
                                 <Row>
-                                    <Col sm={6}>
+                                    <Col md={6}>
                                         <Button variant="success" className="w-100 fw-bold">Edit</Button>
                                     </Col>
-                                    <Col sm={6}>
+                                    <Col md={6}>
                                         <Button variant="danger" className="w-100 fw-bold">Delete</Button>
                                     </Col>
                                 </Row>
@@ -58,10 +58,10 @@ const ProductPage = () => {
                             <td>600</td>
                             <td>
                                 <Row>
-                                    <Col sm={6}>
+                                    <Col md={6}>
                                         <Button variant="success" className="w-100 fw-bold">Edit</Button>
                                     </Col>
-                                    <Col sm={6}>
+                                    <Col md={6}>
                                         <Button variant="danger" className="w-100 fw-bold">Delete</Button>
                                     </Col>
                                 </Row>
@@ -76,10 +76,10 @@ const ProductPage = () => {
                             <td>600</td>
                             <td>
                                 <Row>
-                                    <Col sm={6}>
+                                    <Col md={6}>
                                         <Button variant="success" className="w-100 fw-bold">Edit</Button>
                                     </Col>
-                                    <Col sm={6}>
+                                    <Col md={6}>
                                         <Button variant="danger" className="w-100 fw-bold">Delete</Button>
                                     </Col>
                                 </Row>
@@ -94,10 +94,10 @@ const ProductPage = () => {
                             <td>200</td>
                             <td>
                                 <Row>
-                                    <Col sm={6}>
+                                    <Col md={6}>
                                         <Button variant="success" className="w-100 fw-bold">Edit</Button>
                                     </Col>
-                                    <Col sm={6}>
+                                    <Col md={6}>
                                         <Button variant="danger" className="w-100 fw-bold">Delete</Button>
                                     </Col>
                                 </Row>
@@ -112,10 +112,10 @@ const ProductPage = () => {
                             <td>192</td>
                             <td>
                                 <Row>
-                                    <Col sm={6}>
+                                    <Col md={6}>
                                         <Button variant="success" className="w-100 fw-bold">Edit</Button>
                                     </Col>
-                                    <Col sm={6}>
+                                    <Col md={6}>
                                         <Button variant="danger" className="w-100 fw-bold">Delete</Button>
                                     </Col>
                                 </Row>
@@ -130,10 +130,10 @@ const ProductPage = () => {
                             <td>123</td>
                             <td>
                                 <Row>
-                                    <Col sm={6}>
+                                    <Col md={6}>
                                         <Button variant="success" className="w-100 fw-bold">Edit</Button>
                                     </Col>
-                                    <Col sm={6}>
+                                    <Col md={6}>
                                         <Button variant="danger" className="w-100 fw-bold">Delete</Button>
                                     </Col>
                                 </Row>
