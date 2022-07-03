@@ -22,7 +22,7 @@ const ProfilePage = () => {
                                 </div>
                                 <div>
                                     <h4 className="text-danger fw-bold">Email</h4>
-                                    <p className="text-white">suryamembanggakanibuaamiin@gmail.com</p>
+                                    <p className="text-white">suryahalo@gmail.com</p>
                                 </div>
                                 <div>
                                     <h4 className="text-danger fw-bold">Phone</h4>
