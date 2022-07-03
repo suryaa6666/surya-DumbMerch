@@ -6,12 +6,23 @@ const NavbarComponent = () => {
 
     const navigate = useNavigate();
 
+    let isAdmin = JSON.parse(localStorage.getItem('userLogin'));
+    isAdmin = isAdmin["role"] == 'admin';
+
     const handleComplain = () => {
         navigate('/complain');
     }
 
     const handleProfile = () => {
         navigate('/profile');
+    }
+
+    const handleCategory = () => {
+        navigate('/category');
+    }
+
+    const handleProduct = () => {
+        navigate('/product');
     }
 
     const handleLogout = () => {
@@ -45,7 +56,9 @@ const NavbarComponent = () => {
             <Navbar.Collapse id="responsive-navbar-nav">
                 <Nav className="d-flex justify-content-end w-100">
                     <Nav.Link onClick={handleComplain} className="mx-2 fw-bold" style={{ color: '#FFF' }}>Complain</Nav.Link>
-                    <Nav.Link onClick={handleProfile} className="mx-2 fw-bold" style={{ color: '#FFF' }}>Profile</Nav.Link>
+                    {isAdmin ? <Nav.Link onClick={handleCategory} className="mx-2 fw-bold" style={{ color: '#FFF' }}>Category</Nav.Link> : ''}
+                    {isAdmin ? <Nav.Link onClick={handleProduct} className="mx-2 fw-bold" style={{ color: '#FFF' }}>Product</Nav.Link> : ''}
+                    {isAdmin ? '' : <Nav.Link onClick={handleProfile} className="mx-2 fw-bold" style={{ color: '#FFF' }}>Profile</Nav.Link>}
                     <Nav.Link onClick={handleLogout} className="mx-2 fw-bold" style={{ color: '#FFF' }}>Logout</Nav.Link>
                 </Nav>
             </Navbar.Collapse>

@@ -14,8 +14,7 @@ const Login = () => {
 
     const navigate = useNavigate();
 
-
-    const login = localStorage.getItem('userLogin') ? true : false;
+    const login = localStorage.getItem('userLogin');
 
     useEffect(() => {
         if (login) navigate('/home');
@@ -32,7 +31,7 @@ const Login = () => {
     const handleSubmit = (event) => {
         event.preventDefault();
         let data = localStorage.getItem('user') ? JSON.parse(localStorage.getItem('user')) : [];
-        let login = data.some(item => {
+        let login = data.find(item => {
             return item.email == email && item.password == password; // check if user is there
         });
         if (!email) {

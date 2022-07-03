@@ -43,7 +43,7 @@ function App() {
             <Route path="/detail" element={<DetailProduct />}></Route>
             <Route path="/profile" element={<ProfilePage />}></Route>
             <Route path="/category" element={<CategoryPage />}></Route>
-            <Route path="/products" element={<ProductPage />}></Route>
+            <Route path="/product" element={<ProductPage />}></Route>
             <Route path="/complain" element={<ComplainPage />}></Route>
             <Route path="/editcategory" element={<EditCategory />}></Route>
             <Route path="/editproduct" element={<EditProduct />}></Route>

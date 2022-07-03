@@ -75,7 +75,7 @@ const Register = () => {
                 });
             }
         }
-        data.push({ name, email, password });
+        data.push({ name, email, password, role: 'user' });
         localStorage.setItem('user', JSON.stringify(data));
         toast.success('New account has been successfully created!', {
             position: "top-left",
