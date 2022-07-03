@@ -4,6 +4,7 @@ import Table from 'react-bootstrap/Table';
 import Col from 'react-bootstrap/Col';
 import Row from 'react-bootstrap/Row';
 import Button from 'react-bootstrap/Button';
+import { Link } from 'react-router-dom';
 
 const CategoryProduct = () => {
 
@@ -29,7 +30,7 @@ const CategoryProduct = () => {
                             <td>
                                 <Row>
                                     <Col md={6}>
-                                        <Button variant="success" className="w-100 fw-bold">Edit</Button>
+                                        <Link to='/editcategory' className='text-white text-decoration-none'><Button variant="success" className="w-100 fw-bold">Edit</Button></Link>
                                     </Col>
                                     <Col md={6}>
                                         <Button variant="danger" className="w-100 fw-bold">Delete</Button>
@@ -43,7 +44,7 @@ const CategoryProduct = () => {
                             <td>
                                 <Row>
                                     <Col md={6}>
-                                        <Button variant="success" className="w-100 fw-bold">Edit</Button>
+                                        <Link to='/editcategory' className='text-white text-decoration-none'><Button variant="success" className="w-100 fw-bold">Edit</Button></Link>
                                     </Col>
                                     <Col md={6}>
                                         <Button variant="danger" className="w-100 fw-bold">Delete</Button>
@@ -57,7 +58,7 @@ const CategoryProduct = () => {
                             <td>
                                 <Row>
                                     <Col md={6}>
-                                        <Button variant="success" className="w-100 fw-bold">Edit</Button>
+                                        <Link to='/editcategory' className='text-white text-decoration-none'><Button variant="success" className="w-100 fw-bold">Edit</Button></Link>
                                     </Col>
                                     <Col md={6}>
                                         <Button variant="danger" className="w-100 fw-bold">Delete</Button>
@@ -71,7 +72,7 @@ const CategoryProduct = () => {
                             <td>
                                 <Row>
                                     <Col md={6}>
-                                        <Button variant="success" className="w-100 fw-bold">Edit</Button>
+                                        <Link to='/editcategory' className='text-white text-decoration-none'><Button variant="success" className="w-100 fw-bold">Edit</Button></Link>
                                     </Col>
                                     <Col md={6}>
                                         <Button variant="danger" className="w-100 fw-bold">Delete</Button>
@@ -85,7 +86,7 @@ const CategoryProduct = () => {
                             <td>
                                 <Row>
                                     <Col md={6}>
-                                        <Button variant="success" className="w-100 fw-bold">Edit</Button>
+                                        <Link to='/editcategory' className='text-white text-decoration-none'><Button variant="success" className="w-100 fw-bold">Edit</Button></Link>
                                     </Col>
                                     <Col md={6}>
                                         <Button variant="danger" className="w-100 fw-bold">Delete</Button>
@@ -99,7 +100,7 @@ const CategoryProduct = () => {
                             <td>
                                 <Row>
                                     <Col md={6}>
-                                        <Button variant="success" className="w-100 fw-bold">Edit</Button>
+                                        <Link to='/editcategory' className='text-white text-decoration-none'><Button variant="success" className="w-100 fw-bold">Edit</Button></Link>
                                     </Col>
                                     <Col md={6}>
                                         <Button variant="danger" className="w-100 fw-bold">Delete</Button>
