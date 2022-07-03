@@ -16,9 +16,9 @@ const HomePage = () => {
                 <h3 className="text-danger fw-bold"> Product </h3>
                 <Row>
                     {
-                        data.map(item => {
+                        data.map((item, i) => {
                             return (
-                                <Col md={3}>
+                                <Col md={3} key={i.toString()}>
                                     <ProductCardComponent title={item.name} price={item.price} stock={item.stock} imagesrc={`./assets/img/${item.photo}`} id={item.id} />
                                 </Col>
                             )

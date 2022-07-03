@@ -44,7 +44,7 @@ const NavbarComponent = () => {
             <Navbar.Brand>
                 <Link to="/home">
                     <img
-                        src="./assets/img/logo.png"
+                        src="../assets/img/logo.png"
                         width="70"
                         height="70"
                         className="d-inline-block align-top"

@@ -40,7 +40,7 @@ function App() {
           <Route path="/register" element={<Register />}></Route>
           <Route path="/" element={<PrivateRoute />}>
             <Route path="/home" element={<HomePage />}></Route>
-            <Route path="/detail" element={<DetailProduct />}></Route>
+            <Route path="/detail/:id" element={<DetailProduct />}></Route>
             <Route path="/profile" element={<ProfilePage />}></Route>
             <Route path="/category" element={<CategoryPage />}></Route>
             <Route path="/product" element={<ProductPage />}></Route>
