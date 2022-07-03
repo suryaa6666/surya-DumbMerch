@@ -3,12 +3,25 @@ import Row from 'react-bootstrap/Row';
 import Container from 'react-bootstrap/Container';
 import NavbarComponent from "../components/NavbarComponent";
 import ProductTransactionComponent from "../components/ProductTransactionComponent";
+import { useState, useEffect } from 'react';
 
 const ProfilePage = () => {
 
     document.title = 'My Profile';
 
+    const [subTotal, setSubTotal] = useState(0);
+
     let data = localStorage.getItem('buy') ? JSON.parse(localStorage.getItem('buy')) : [];
+
+    const getSubTotal = () => {
+        let total = 0;
+        data.map(item => total += item.price);
+        setSubTotal(total);
+    }
+
+    useEffect(() => {
+        getSubTotal();
+    }, [])
 
     return (
         <>
@@ -53,6 +66,9 @@ const ProfilePage = () => {
                                     return <ProductTransactionComponent photo={item.photo} name={item.name} price={item.price} date={item.date} id={item.id} key={i.toString()} />
                                 })
                             }
+                            <p className="w-100 fw-bold text-white">
+                                Sub Total : Rp. {subTotal}
+                            </p>
                         </div>
                     </Col>
                 </Row>

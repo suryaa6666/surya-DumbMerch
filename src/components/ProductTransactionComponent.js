@@ -31,9 +31,6 @@ const ProductTransactionComponent = (props) => {
                 <p>
                     Price : Rp. {props.price}
                 </p>
-                <p className="w-100 fw-bold">
-                    Sub Total : Rp. {props.price}
-                </p>
             </Col>
             <Col sm={3}>
                 <img src='../assets/img/logo.png' className="w-100 h-100" style={{ objectFit: 'contain' }} />
