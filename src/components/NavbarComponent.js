@@ -6,6 +6,14 @@ const NavbarComponent = () => {
 
     const navigate = useNavigate();
 
+    const handleComplain = () => {
+        navigate('/complain');
+    }
+
+    const handleProfile = () => {
+        navigate('/profile');
+    }
+
     const handleLogout = () => {
         localStorage.removeItem('userLogin');
         navigate('/');
@@ -25,8 +33,8 @@ const NavbarComponent = () => {
             <Navbar.Toggle aria-controls="responsive-navbar-nav" />
             <Navbar.Collapse id="responsive-navbar-nav">
                 <Nav className="d-flex justify-content-end w-100">
-                    <Nav.Link className="mx-2 fw-bold" style={{ color: '#FFF' }}>Complain</Nav.Link>
-                    <Nav.Link className="mx-2 fw-bold" style={{ color: '#FFF' }}>Profile</Nav.Link>
+                    <Nav.Link onClick={handleComplain} className="mx-2 fw-bold" style={{ color: '#FFF' }}>Complain</Nav.Link>
+                    <Nav.Link onClick={handleProfile} className="mx-2 fw-bold" style={{ color: '#FFF' }}>Profile</Nav.Link>
                     <Nav.Link onClick={handleLogout} className="mx-2 fw-bold" style={{ color: '#FFF' }}>Logout</Nav.Link>
                 </Nav>
             </Navbar.Collapse>
