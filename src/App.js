@@ -25,6 +25,8 @@ function App() {
           </Route>
           <Route path="/register" element={<Register />}>
           </Route>
+          <Route path="/home" element={<HomePage />}>
+          </Route>
         </Routes>
       </BrowserRouter>
     </>

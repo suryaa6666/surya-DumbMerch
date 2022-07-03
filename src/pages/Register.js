@@ -1,8 +1,33 @@
 import { Col, Container, Row, Form, Button, Image } from 'react-bootstrap';
 import registerStyle from '../styles/Register.module.css';
 import { Link } from 'react-router-dom';
+import { useState } from 'react';
 
 const Register = () => {
+
+    const [name, setName] = useState('');
+    const [email, setEmail] = useState('');
+    const [password, setPassword] = useState('');
+
+    const handleNameChange = (event) => {
+        setName(event.target.value);
+    }
+
+    const handleEmailChange = (event) => {
+        setEmail(event.target.value);
+    }
+
+    const handlePasswordChange = (event) => {
+        setPassword(event.target.value);
+    }
+
+    const handleSubmit = (event) => {
+        event.preventDefault();
+        let data = localStorage.getItem('user') ? JSON.parse(localStorage.getItem('user')) : [];
+        data.push({ name, email, password });
+        localStorage.setItem('user', JSON.stringify(data));
+    }
+
     return (
         <Container className="d-flex align-items-center justify-content-center" style={{ height: '100vh' }}>
             <Row>
@@ -26,15 +51,15 @@ const Register = () => {
                         <h1 className={registerStyle.fontWhiteBold}>Register</h1>
                         <Form className="mt-4">
                             <Form.Group className="mb-3">
-                                <Form.Control type="text" placeholder="Name" style={{ backgroundColor: '#474647' }} />
+                                <Form.Control type="text" placeholder="Name" style={{ backgroundColor: '#474647' }} name="name" onChange={handleNameChange} />
                             </Form.Group>
                             <Form.Group className="mb-3">
-                                <Form.Control type="text" placeholder="Email" style={{ backgroundColor: '#474647' }} />
+                                <Form.Control type="text" placeholder="Email" style={{ backgroundColor: '#474647' }} name="email" onChange={handleEmailChange} />
                             </Form.Group>
                             <Form.Group className="mb-3">
-                                <Form.Control type="password" placeholder="Password" style={{ backgroundColor: '#474647' }} />
+                                <Form.Control type="password" placeholder="Password" style={{ backgroundColor: '#474647' }} name="password" onChange={handlePasswordChange} />
                             </Form.Group>
-                            <Button variant="danger" type="submit" className="w-100 mt-4">
+                            <Button variant="danger" type="submit" className="w-100 mt-4" onClick={(event) => handleSubmit(event)}>
                                 Register
                             </Button>
                         </Form>
