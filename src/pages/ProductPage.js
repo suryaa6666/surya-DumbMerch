@@ -4,11 +4,18 @@ import Table from 'react-bootstrap/Table';
 import Button from 'react-bootstrap/Button';
 import Col from 'react-bootstrap/Col';
 import Row from 'react-bootstrap/Row';
+import Modal from 'react-bootstrap/Modal';
+import { useState } from 'react';
 import { Link } from 'react-router-dom';
 
 const ProductPage = () => {
 
     document.title = 'List Product';
+
+    const [show, setShow] = useState(false);
+
+    const handleClose = () => setShow(false);
+    const handleShow = () => setShow(true);
 
     const maxWord = (word) => {
         return word.length >= 40 ? word.substring(0, 40) + "..." : word;
@@ -45,7 +52,7 @@ const ProductPage = () => {
                                         <Link to='/editproduct' className='text-white text-decoration-none'><Button variant="success" className="w-100 fw-bold">Edit</Button></Link>
                                     </Col>
                                     <Col md={6}>
-                                        <Button variant="danger" className="w-100 fw-bold">Delete</Button>
+                                        <Button variant="danger" className="w-100 fw-bold" onClick={handleShow}>Delete</Button>
                                     </Col>
                                 </Row>
                             </td>
@@ -63,7 +70,7 @@ const ProductPage = () => {
                                         <Link to='/editproduct' className='text-white text-decoration-none'><Button variant="success" className="w-100 fw-bold">Edit</Button></Link>
                                     </Col>
                                     <Col md={6}>
-                                        <Button variant="danger" className="w-100 fw-bold">Delete</Button>
+                                        <Button variant="danger" className="w-100 fw-bold" onClick={handleShow}>Delete</Button>
                                     </Col>
                                 </Row>
                             </td>
@@ -81,7 +88,7 @@ const ProductPage = () => {
                                         <Link to='/editproduct' className='text-white text-decoration-none'><Button variant="success" className="w-100 fw-bold">Edit</Button></Link>
                                     </Col>
                                     <Col md={6}>
-                                        <Button variant="danger" className="w-100 fw-bold">Delete</Button>
+                                        <Button variant="danger" className="w-100 fw-bold" onClick={handleShow}>Delete</Button>
                                     </Col>
                                 </Row>
                             </td>
@@ -99,7 +106,7 @@ const ProductPage = () => {
                                         <Link to='/editproduct' className='text-white text-decoration-none'><Button variant="success" className="w-100 fw-bold">Edit</Button></Link>
                                     </Col>
                                     <Col md={6}>
-                                        <Button variant="danger" className="w-100 fw-bold">Delete</Button>
+                                        <Button variant="danger" className="w-100 fw-bold" onClick={handleShow}>Delete</Button>
                                     </Col>
                                 </Row>
                             </td>
@@ -117,7 +124,7 @@ const ProductPage = () => {
                                         <Link to='/editproduct' className='text-white text-decoration-none'><Button variant="success" className="w-100 fw-bold">Edit</Button></Link>
                                     </Col>
                                     <Col md={6}>
-                                        <Button variant="danger" className="w-100 fw-bold">Delete</Button>
+                                        <Button variant="danger" className="w-100 fw-bold" onClick={handleShow}>Delete</Button>
                                     </Col>
                                 </Row>
                             </td>
@@ -135,13 +142,27 @@ const ProductPage = () => {
                                         <Link to='/editproduct' className='text-white text-decoration-none'><Button variant="success" className="w-100 fw-bold">Edit</Button></Link>
                                     </Col>
                                     <Col md={6}>
-                                        <Button variant="danger" className="w-100 fw-bold">Delete</Button>
+                                        <Button variant="danger" className="w-100 fw-bold" onClick={handleShow}>Delete</Button>
                                     </Col>
                                 </Row>
                             </td>
                         </tr>
                     </tbody>
                 </Table>
+                <Modal show={show} onHide={handleClose}>
+                    <Modal.Header closeButton>
+                        <Modal.Title>Delete Data</Modal.Title>
+                    </Modal.Header>
+                    <Modal.Body>Are you sure you want to delete this data?</Modal.Body>
+                    <Modal.Footer>
+                        <Button variant="success" onClick={handleClose} className="px-4">
+                            Yes
+                        </Button>
+                        <Button variant="danger" onClick={handleClose} className="px-4">
+                            No
+                        </Button>
+                    </Modal.Footer>
+                </Modal>
             </Container>
         </>
     )
