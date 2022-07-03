@@ -64,10 +64,10 @@ const Login = () => {
                         <h1 className={loginStyle.fontWhiteBold}>Login</h1>
                         <Form className="mt-4" method='POST'>
                             <Form.Group className="mb-3">
-                                <Form.Control type="text" placeholder="Email" style={{ backgroundColor: '#474647' }} name="email" onChange={handleEmailChange} />
+                                <Form.Control type="text" placeholder="Email" style={{ backgroundColor: '#474647' }} name="email" onChange={handleEmailChange} className="text-white" />
                             </Form.Group>
                             <Form.Group className="mb-3">
-                                <Form.Control type="password" placeholder="Password" style={{ backgroundColor: '#474647' }} name="password" onChange={handlePasswordChange} />
+                                <Form.Control type="password" placeholder="Password" style={{ backgroundColor: '#474647' }} name="password" onChange={handlePasswordChange} className="text-white" />
                             </Form.Group>
                             <Button variant="danger" type="submit" className="w-100 mt-4" onClick={handleSubmit}>
                                 Login

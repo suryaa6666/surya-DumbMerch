@@ -14,7 +14,7 @@ const EditCategory = () => {
                 <h3 className="text-white fw-bold"> Edit Category </h3>
                 <Form className="mt-4">
                     <Form.Group className="mb-3">
-                        <Form.Control type="text" placeholder="Product category" style={{ backgroundColor: '#474647' }} />
+                        <Form.Control type="text" placeholder="Product category" style={{ backgroundColor: '#474647' }} className="text-white" />
                     </Form.Group>
                     <Button variant="success" type="submit" className="w-100 mt-4">
                         Save

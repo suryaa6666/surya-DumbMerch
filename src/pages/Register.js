@@ -53,13 +53,13 @@ const Register = () => {
                         <h1 className={registerStyle.fontWhiteBold}>Register</h1>
                         <Form className="mt-4">
                             <Form.Group className="mb-3">
-                                <Form.Control type="text" placeholder="Name" style={{ backgroundColor: '#474647' }} name="name" onChange={handleNameChange} />
+                                <Form.Control type="text" placeholder="Name" style={{ backgroundColor: '#474647' }} name="name" onChange={handleNameChange} className="text-white" />
                             </Form.Group>
                             <Form.Group className="mb-3">
-                                <Form.Control type="text" placeholder="Email" style={{ backgroundColor: '#474647' }} name="email" onChange={handleEmailChange} />
+                                <Form.Control type="text" placeholder="Email" style={{ backgroundColor: '#474647' }} name="email" onChange={handleEmailChange} className="text-white" />
                             </Form.Group>
                             <Form.Group className="mb-3">
-                                <Form.Control type="password" placeholder="Password" style={{ backgroundColor: '#474647' }} name="password" onChange={handlePasswordChange} />
+                                <Form.Control type="password" placeholder="Password" style={{ backgroundColor: '#474647' }} name="password" onChange={handlePasswordChange} className="text-white" />
                             </Form.Group>
                             <Button variant="danger" type="submit" className="w-100 mt-4" onClick={(event) => handleSubmit(event)}>
                                 Register
