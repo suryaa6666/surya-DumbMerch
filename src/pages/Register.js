@@ -35,7 +35,7 @@ const Register = () => {
                                 <Form.Control type="password" placeholder="Password" style={{ backgroundColor: '#474647' }} />
                             </Form.Group>
                             <Button variant="danger" type="submit" className="w-100 mt-4">
-                                Login
+                                Register
                             </Button>
                         </Form>
                     </Container>
