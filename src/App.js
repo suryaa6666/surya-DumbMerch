@@ -10,11 +10,23 @@ import ProfilePage from './pages/ProfilePage';
 import Register from './pages/Register';
 import EditCategory from './pages/EditCategory';
 import EditProduct from './pages/EditProduct';
+import {
+  BrowserRouter,
+  Routes,
+  Route,
+} from "react-router-dom";
 
 function App() {
   return (
     <>
-      <EditProduct />
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Login />}>
+          </Route>
+          <Route path="/register" element={<Register />}>
+          </Route>
+        </Routes>
+      </BrowserRouter>
     </>
   );
 }

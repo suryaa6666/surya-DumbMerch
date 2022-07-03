@@ -1,5 +1,6 @@
 import { Col, Container, Row, Form, Button, Image } from 'react-bootstrap';
 import loginStyle from '../styles/Login.module.css';
+import { Link } from 'react-router-dom';
 
 const Login = () => {
     return (
@@ -13,8 +14,8 @@ const Login = () => {
                     </div>
                     <Row className="mt-5">
                         <Col sm={6}>
-                            <Button variant="danger" className="pe-3 ps-3 mx-2">Login</Button>
-                            <Button variant="outline-secondary" className="pe-3 ps-3 mx-2">Register</Button>
+                            <Link to='/' className='btn btn-danger text-white text-decoration-none px-3 mx-2'>Login</Link>
+                            <Link to='/register' className='btn btn-outline-secondary text-white text-decoration-none px-3 mx-2'>Register</Link>
                         </Col>
                         <Col sm={6}>
                         </Col>
