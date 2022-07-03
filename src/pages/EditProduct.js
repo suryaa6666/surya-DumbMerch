@@ -13,7 +13,7 @@ const EditProduct = () => {
     return (
         <>
             <NavbarComponent />
-            <Container style={{ marginTop: '50px', paddingBottom: '50px' }}>
+            <Container className="py-5">
                 <h3 className="text-white fw-bold"> Edit Product </h3>
                 <Form className="mt-4">
                     <div className="mb-3">

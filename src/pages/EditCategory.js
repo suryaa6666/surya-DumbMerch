@@ -10,7 +10,7 @@ const EditCategory = () => {
     return (
         <>
             <NavbarComponent />
-            <Container style={{ marginTop: '50px', paddingBottom: '50px' }}>
+            <Container className="py-5">
                 <h3 className="text-white fw-bold"> Edit Category </h3>
                 <Form className="mt-4">
                     <Form.Group className="mb-3">

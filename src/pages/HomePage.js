@@ -11,7 +11,7 @@ const HomePage = () => {
     return (
         <>
             <NavbarComponent />
-            <Container style={{ marginTop: '50px' }}>
+            <Container className="py-5">
                 <h3 className="text-danger fw-bold"> Product </h3>
                 <Row>
                     <Col sm={3}>

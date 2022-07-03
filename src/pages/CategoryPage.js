@@ -10,7 +10,7 @@ const CategoryProduct = () => {
     return (
         <>
             <NavbarComponent />
-            <Container style={{ marginTop: '50px', paddingBottom: '50px' }}>
+            <Container className="py-5">
                 <h3 className="text-white fw-bold"> List Category </h3>
                 <Table striped bordered hover variant="dark" className='mt-4'>
                     <thead>

@@ -10,7 +10,7 @@ const ProfilePage = () => {
     return (
         <>
             <NavbarComponent />
-            <Container style={{ marginTop: '50px' }}>
+            <Container className="py-5">
                 <h3 className="text-danger fw-bold"> My Profile </h3>
                 <Row>
                     <Col sm={6}>

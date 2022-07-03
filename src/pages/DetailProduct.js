@@ -11,7 +11,7 @@ const DetailProduct = () => {
     return (
         <>
             <NavbarComponent />
-            <Container style={{ marginTop: '50px', marginBottom: '50px' }}>
+            <Container className="py-5">
                 <Row>
                     <Col sm={4}>
                         <img src='./assets/img/product1.png' alt="Image cannot be loaded" className='w-100' style={{ maxHeight: '400px', objectFit: 'cover' }} />

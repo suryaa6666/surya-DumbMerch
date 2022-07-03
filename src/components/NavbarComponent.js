@@ -1,6 +1,5 @@
 import { Navbar, Nav } from 'react-bootstrap';
-import { useNavigate } from 'react-router-dom';
-
+import { useNavigate, Link } from 'react-router-dom';
 
 const NavbarComponent = () => {
 
@@ -21,14 +20,16 @@ const NavbarComponent = () => {
 
     return (
         <Navbar collapseOnSelect expand="lg" variant="dark" className="pe-5 ps-5">
-            <Navbar.Brand href="/">
-                <img
-                    src="./assets/img/logo.png"
-                    width="70"
-                    height="70"
-                    className="d-inline-block align-top"
-                    alt="Dumb Merch Logo"
-                />
+            <Navbar.Brand>
+                <Link to="/home">
+                    <img
+                        src="./assets/img/logo.png"
+                        width="70"
+                        height="70"
+                        className="d-inline-block align-top"
+                        alt="Dumb Merch Logo"
+                    />
+                </Link>
             </Navbar.Brand>
             <Navbar.Toggle aria-controls="responsive-navbar-nav" />
             <Navbar.Collapse id="responsive-navbar-nav">

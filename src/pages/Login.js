@@ -1,5 +1,5 @@
 import { Col, Container, Row, Form, Button, Image } from 'react-bootstrap';
-import { Route, useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import loginStyle from '../styles/Login.module.css';
 import { Link } from 'react-router-dom';
 import { useState, useEffect } from 'react';
