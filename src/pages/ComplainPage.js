@@ -18,7 +18,7 @@ const ComplainPage = () => {
             <NavbarComponent />
             <div style={{ marginTop: '50px' }}>
                 <Row className="text-white px-4">
-                    <Col sm={3} style={{ borderRight: '1px solid #6A6A6A' }}>
+                    <Col lg={3} md={12} style={{ borderRight: '1px solid #6A6A6A' }}>
                         <Button style={{ backgroundColor: 'transparent', border: 'none' }} className="w-100">
                             <Row className="p-1">
                                 <Col sm={3}>
@@ -42,7 +42,7 @@ const ComplainPage = () => {
                             </Row>
                         </Button>
                     </Col>
-                    <Col sm={9} className="px-4" style={{ height: '70vh' }}>
+                    <Col lg={9} md={12} className="px-4" style={{ height: '70vh' }}>
                         <div style={{ height: '60vh' }} className="d-flex justify-content-end flex-column">
                             <Row className="d-flex align-items-center my-2 w-100">
                                 <Col sm={1}>
