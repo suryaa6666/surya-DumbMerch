@@ -14,6 +14,14 @@ const dummyData = [
         description: 'This is the best keyboard ever hehehehehe ^_^',
         price: 700000,
         stock: 300
+    },
+    {
+        id: 3,
+        name: 'Tess',
+        photo: 'product2.png',
+        description: 'This is the best keyboard ever hehehehehe ^_^',
+        price: 700000,
+        stock: 300
     }
 ];
 

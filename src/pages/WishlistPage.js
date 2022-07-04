@@ -30,7 +30,7 @@ const WishlistPage = () => {
                     {
                         data?.map((item, i) => {
                             return (
-                                <Col md={3} key={i.toString()}>
+                                <Col lg={3} md={4} sm={6} key={i.toString()}>
                                     <ProductCardComponent title={item.title} price={item.price} stock={item.stock} imagesrc={item.imagesrc} id={item.id} />
                                 </Col>
                             )

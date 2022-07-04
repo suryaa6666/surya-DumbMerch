@@ -18,8 +18,8 @@ const HomePage = () => {
                     {
                         data.map((item, i) => {
                             return (
-                                <Col md={3} key={i.toString()}>
-                                    <ProductCardComponent title={item.name} price={item.price} stock={item.stock} imagesrc={`../assets/img/${item.photo}`} id={item.id} />
+                                <Col lg={3} md={4} sm={6} key={i.toString()}>
+                                    <ProductCardComponent title={item.name} price={item.price} stock={item.stock} imagesrc={`../assets/img/${item.photo}`} id={item.id} className="mx-3"/>
                                 </Col>
                             )
                         })
