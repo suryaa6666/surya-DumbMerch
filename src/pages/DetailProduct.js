@@ -58,8 +58,8 @@ const DetailProduct = () => {
                         <h2 className="text-danger fw-bold"> {dataDetail.name} </h2>
                         <div className="text-white">
                             <p>Stock : {dataDetail.stock} </p>
-                            <p style={{ height: '250px', maxHeight: '250px', wordWrap: 'break-word', overflow: 'scroll' }}>
-                                {dataDetail.description}
+                            <p style={{ height: '250px', maxHeight: '250px', wordWrap: 'break-word', overflowX: 'hidden', overflowY: 'auto' }}>
+                             {dataDetail.description}
                             </p>
                         </div>
                         <div className="d-flex justify-content-end">
