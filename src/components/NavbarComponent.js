@@ -25,6 +25,10 @@ const NavbarComponent = () => {
         navigate('/product');
     }
 
+    const handleWishlist = () => {
+        navigate('/wishlist');
+    }
+
     const handleLogout = () => {
         localStorage.removeItem('userLogin');
         toast.success('Logout success!', {
@@ -59,6 +63,7 @@ const NavbarComponent = () => {
                     {isAdmin ? <Nav.Link onClick={handleCategory} className="mx-2 fw-bold" style={{ color: '#FFF' }}>Category</Nav.Link> : ''}
                     {isAdmin ? <Nav.Link onClick={handleProduct} className="mx-2 fw-bold" style={{ color: '#FFF' }}>Product</Nav.Link> : ''}
                     {isAdmin ? '' : <Nav.Link onClick={handleProfile} className="mx-2 fw-bold" style={{ color: '#FFF' }}>Profile</Nav.Link>}
+                    {isAdmin ? '' : <Nav.Link onClick={handleWishlist} className="mx-2 fw-bold" style={{ color: '#FFF' }}>Wishlist</Nav.Link>}
                     <Nav.Link onClick={handleLogout} className="mx-2 fw-bold" style={{ color: '#FFF' }}>Logout</Nav.Link>
                 </Nav>
             </Navbar.Collapse>

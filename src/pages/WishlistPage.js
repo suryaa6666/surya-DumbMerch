@@ -3,23 +3,35 @@ import Row from 'react-bootstrap/Row';
 import NavbarComponent from "../components/NavbarComponent"
 import Container from 'react-bootstrap/Container';
 import ProductCardComponent from "../components/ProductCardComponent";
-import data from '../dummyData';
+import { useState, useEffect } from 'react';
 
-const HomePage = () => {
+
+const WishlistPage = () => {
 
     document.title = 'Home';
+
+    const [data, setData] = useState();
+
+    const getWishlistData = () => {
+        const wishlist = localStorage.getItem('wishlist') ? JSON.parse(localStorage.getItem('wishlist')) : [];
+        setData(wishlist);
+    }
+
+    useEffect(() => {
+        getWishlistData();
+    }, []);
 
     return (
         <>
             <NavbarComponent />
             <Container className="py-5">
-                <h3 className="text-danger fw-bold"> Product </h3>
+                <h3 className="text-danger fw-bold"> My Wishlist Product </h3>
                 <Row>
                     {
-                        data.map((item, i) => {
+                        data?.map((item, i) => {
                             return (
                                 <Col md={3} key={i.toString()}>
-                                    <ProductCardComponent title={item.name} price={item.price} stock={item.stock} imagesrc={`../assets/img/${item.photo}`} id={item.id} />
+                                    <ProductCardComponent title={item.title} price={item.price} stock={item.stock} imagesrc={item.imagesrc} id={item.id} />
                                 </Col>
                             )
                         })
@@ -30,4 +42,4 @@ const HomePage = () => {
     )
 }
 
-export default HomePage
+export default WishlistPage

@@ -10,6 +10,7 @@ import ProfilePage from './pages/ProfilePage';
 import Register from './pages/Register';
 import EditCategory from './pages/EditCategory';
 import EditProduct from './pages/EditProduct';
+import WishlistPage from './pages/WishlistPage';
 import PrivateRoute from './components/PrivateRoute';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
@@ -47,6 +48,7 @@ function App() {
             <Route path="/complain" element={<ComplainPage />}></Route>
             <Route path="/editcategory" element={<EditCategory />}></Route>
             <Route path="/editproduct" element={<EditProduct />}></Route>
+            <Route path="/wishlist" element={<WishlistPage />}></Route>
           </Route>
         </Routes>
       </BrowserRouter>
