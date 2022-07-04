@@ -37,7 +37,7 @@ const ProfilePage = () => {
             <Container className="py-5">
                 <h3 className="text-danger fw-bold"> My Profile </h3>
                 <Row>
-                    <Col sm={6}>
+                    <Col lg={6} md={12}>
                         <Row>
                             <Col sm={6}>
                                 <img src='../assets/img/myprofile.jpg' alt="Image cannot be loaded" className='w-100' style={{ maxHeight: '400px', objectFit: 'cover', borderRadius: '10px' }} />
@@ -66,7 +66,7 @@ const ProfilePage = () => {
                             </Col>
                         </Row>
                     </Col>
-                    <Col sm={6}>
+                    <Col lg={6} md={12}>
                         <h3 className="text-danger fw-bold"> My Transaction </h3>
                         <div className="w-100" style={{ backgroundColor: '#303031', padding: '20px' }}>
                             {
